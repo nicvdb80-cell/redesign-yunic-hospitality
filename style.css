@@ -24,7 +24,11 @@
 html{scroll-behavior:smooth}
 html,body{overflow-x:clip}
 body{
-  background:var(--paper);
+  background-color:var(--paper);
+  background-image:url("marble-white.jpg");
+  background-repeat:no-repeat;
+  background-position:top center;
+  background-size:cover;
   color:var(--body);
   font:300 1.0625rem/1.75 var(--sans);
   -webkit-font-smoothing:antialiased;
