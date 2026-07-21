@@ -449,6 +449,33 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
   .not-note{text-align:left}
   .hero-meta{display:none}
 }
+@media(max-width:480px){
+  .container{width:94vw}
+  .site-nav{padding-inline:1rem}
+  .brand{gap:.55rem}
+  .brand-mark{width:36px;height:36px}
+  .brand-word{font-size:.82rem;letter-spacing:.08em}
+  .nav-toggle{padding:.75rem .5rem}
+  .hero{padding-top:6.5rem}
+  .hero-title{font-size:clamp(2.5rem,11vw,3.4rem)}
+  .hero-sub{font-size:1rem}
+  .hero-actions{gap:1.3rem}
+  .page-hero{padding:8rem 0 clamp(2.2rem,6vw,3rem)}
+  .page-hero .display{font-size:clamp(2.2rem,9vw,3rem)}
+  .page-meta{gap:1.4rem}
+  .btn{padding:.85rem 1.3rem;font-size:.66rem;letter-spacing:.18em}
+  .cta-band{flex-direction:column;align-items:flex-start;padding:clamp(1.8rem,6vw,2.5rem)}
+  .cta-band h2{font-size:clamp(1.5rem,6.5vw,2.1rem)}
+  .media-card .mc-body{flex-wrap:wrap;gap:.8rem;padding:1.3rem}
+  .media-card h3{font-size:1.35rem}
+  .p-row{grid-template-columns:1fr;gap:.4rem}
+  .p-row .j-soon{font-size:.85rem}
+  .contact-row{grid-template-columns:1fr 2.2rem}
+  .cr-value{font-size:1.15rem}
+  .footer-base{justify-content:center;text-align:center}
+  .svc-desc{font-size:.86rem}
+  .founder-caption{padding:.9rem 1.1rem;min-width:88%}
+}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
