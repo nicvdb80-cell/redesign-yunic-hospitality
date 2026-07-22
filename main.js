@@ -80,3 +80,50 @@
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* background music, site-wide toggle, preference remembered across pages */
+(function () {
+  'use strict';
+  var STORAGE_KEY = 'yunic-music';
+
+  var audio = document.createElement('audio');
+  audio.src = 'background-track.mp3';
+  audio.loop = true;
+  audio.preload = 'none';
+  document.body.appendChild(audio);
+
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'music-toggle';
+  btn.setAttribute('aria-pressed', 'false');
+  btn.setAttribute('aria-label', 'Play background music');
+  btn.innerHTML = '<span class="mt-bars" aria-hidden="true"><i></i><i></i><i></i></span>';
+  document.body.appendChild(btn);
+
+  function reflect(playing) {
+    btn.classList.toggle('is-playing', playing);
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    btn.setAttribute('aria-label', playing ? 'Pause background music' : 'Play background music');
+  }
+
+  audio.addEventListener('play', function () { reflect(true); });
+  audio.addEventListener('pause', function () { reflect(false); });
+
+  btn.addEventListener('click', function () {
+    if (audio.paused) {
+      audio.play().then(function () {
+        localStorage.setItem(STORAGE_KEY, 'on');
+      }).catch(function () {});
+    } else {
+      audio.pause();
+      localStorage.setItem(STORAGE_KEY, 'off');
+    }
+  });
+
+  /* try to resume automatically on each new page if the visitor had it playing;
+     browsers may block this until there has been a real click on this page,
+     in which case the button simply waits, showing as available to tap */
+  if (localStorage.getItem(STORAGE_KEY) === 'on') {
+    audio.play().catch(function () {});
+  }
+})();
