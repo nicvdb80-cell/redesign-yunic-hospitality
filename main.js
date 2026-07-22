@@ -81,10 +81,11 @@
   if (y) y.textContent = new Date().getFullYear();
 })();
 
-/* background music, site-wide toggle, preference remembered across pages */
+/* background music: entry gate on first visit + site-wide toggle */
 (function () {
   'use strict';
   var STORAGE_KEY = 'yunic-music';
+  var SESSION_KEY = 'yunic-entered';
 
   var audio = document.createElement('audio');
   audio.src = 'background-track.mp3';
@@ -120,10 +121,48 @@
     }
   });
 
-  /* try to resume automatically on each new page if the visitor had it playing;
-     browsers may block this until there has been a real click on this page,
-     in which case the button simply waits, showing as available to tap */
-  if (localStorage.getItem(STORAGE_KEY) === 'on') {
-    audio.play().catch(function () {});
+  /* try to resume automatically on each new page within the same visit if
+     the visitor already has it on; browsers generally allow this once
+     there has been a real click earlier in the session */
+  function tryResume() {
+    if (localStorage.getItem(STORAGE_KEY) === 'on') {
+      audio.play().catch(function () {});
+    }
+  }
+
+  /* one-time entry gate: shown once per browser session (not on every
+     page navigation), gives a single click that both reveals the site
+     and starts the music with real user-gesture permission */
+  if (!sessionStorage.getItem(SESSION_KEY)) {
+    var gate = document.createElement('div');
+    gate.className = 'entry-gate';
+    gate.innerHTML =
+      '<div class="eg-inner">' +
+        '<img src="yunic-logo-gold.png" alt="Yunic Hospitality" class="eg-logo">' +
+        '<p class="eg-word">Yunic Hospitality</p>' +
+        '<button type="button" class="btn eg-enter"><span>Enter</span></button>' +
+        '<button type="button" class="eg-skip">Continue without sound</button>' +
+      '</div>';
+    document.body.appendChild(gate);
+    document.body.style.overflow = 'hidden';
+
+    function dismiss(withSound) {
+      sessionStorage.setItem(SESSION_KEY, '1');
+      if (withSound) {
+        audio.play().then(function () {
+          localStorage.setItem(STORAGE_KEY, 'on');
+        }).catch(function () {});
+      }
+      gate.classList.add('closing');
+      document.body.style.overflow = '';
+      window.setTimeout(function () {
+        gate.remove();
+      }, 650);
+    }
+
+    gate.querySelector('.eg-enter').addEventListener('click', function () { dismiss(true); });
+    gate.querySelector('.eg-skip').addEventListener('click', function () { dismiss(false); });
+  } else {
+    tryResume();
   }
 })();
