@@ -86,12 +86,37 @@
   'use strict';
   var STORAGE_KEY = 'yunic-music';
   var SESSION_KEY = 'yunic-entered';
+  var TIME_KEY = 'yunic-music-time';
 
   var audio = document.createElement('audio');
   audio.src = 'background-track.mp3';
   audio.loop = true;
-  audio.preload = 'none';
+  /* 'metadata' (not 'none') so duration loads immediately on every page,
+     letting us restore the saved playback position before audio starts */
+  audio.preload = 'metadata';
   document.body.appendChild(audio);
+
+  /* carry playback position across page navigations so the track
+     continues from where it left off instead of restarting at 0:00 */
+  function restoreTime() {
+    var t = parseFloat(localStorage.getItem(TIME_KEY));
+    if (!isNaN(t) && t > 0 && isFinite(audio.duration) && audio.duration > 0) {
+      audio.currentTime = t % audio.duration;
+    }
+  }
+  audio.addEventListener('loadedmetadata', restoreTime);
+  if (audio.readyState >= 1) restoreTime();
+
+  function saveTime() {
+    if (!isNaN(audio.currentTime)) {
+      localStorage.setItem(TIME_KEY, String(audio.currentTime));
+    }
+  }
+  window.setInterval(function () {
+    if (!audio.paused) saveTime();
+  }, 1000);
+  window.addEventListener('pagehide', saveTime);
+  window.addEventListener('beforeunload', saveTime);
 
   var btn = document.createElement('button');
   btn.type = 'button';
