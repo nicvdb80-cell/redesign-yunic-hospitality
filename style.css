@@ -3,6 +3,7 @@
    Cormorant SC · Cormorant italic · DM Sans
    ============================================================ */
 :root{
+  color-scheme: light only;
   --paper:#F7F7F4;
   --cream:#EFEFEA;
   --sand:#E3E1DB;
