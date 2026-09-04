@@ -73,6 +73,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 
 /* hand-drawn underline */
 .u-line{position:relative;white-space:nowrap}
+.u-line svg{display:none}
 .u-line svg{position:absolute;left:-2%;bottom:-.28em;width:104%;height:.42em;overflow:visible}
 .u-line path{fill:none;stroke:var(--gold);stroke-width:2.4;stroke-linecap:round;
   stroke-dasharray:320;stroke-dashoffset:320;transition:stroke-dashoffset 1.4s var(--ease) .3s}
