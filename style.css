@@ -547,3 +547,23 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
   .eg-word{font-size:.92rem;letter-spacing:.12em}
   .eg-inner{gap:1.1rem;padding:1.5rem}
 }
+
+/* ===== Force light in EVERY browser, even when OS/browser prefers or forces dark =====
+   Re-assert the light palette + marble so standards-based dark engines can't recolor it. */
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: only light;
+    --paper:#F7F7F4;--cream:#EFEFEA;--sand:#E3E1DB;
+    --ink:#252420;--body:#56554F;
+    --gold:#A48760;--gold-deep:#8A6D4B;--clay:#A9623F;
+    --line:rgba(41,39,31,.16);--line-soft:rgba(41,39,31,.09);
+  }
+  html,body{
+    background-color:#F7F7F4 !important;
+    background-image:url("marble-white.jpg") !important;
+    color:#56554F !important;
+  }
+  .display,.hero-title,.footer-title,.band-title,.svc-name,.not-line,.duo-body h2,
+  .cta-band h2,.media-card h3,.j-place h3,.p-group-head h2,.cr-value,.brand-word,
+  .about-body .display,.page-hero .display,.testimonial blockquote,.founder-caption h3{color:#252420 !important}
+}
