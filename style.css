@@ -26,14 +26,18 @@ html{scroll-behavior:smooth}
 html,body{overflow-x:clip}
 body{
   background-color:var(--paper);
-  background-image:url("marble-white.jpg");
-  background-repeat:no-repeat;
-  background-position:top center;
-  background-size:cover;
   color:var(--body);
   font:300 1.0625rem/1.75 var(--sans);
   -webkit-font-smoothing:antialiased;
   letter-spacing:.005em;
+}
+/* fixed marble base — one crisp marble across every page, no stretch on long pages */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:var(--paper) url("marble-white.jpg") center center / cover no-repeat;
 }
 ::selection{background:var(--gold);color:var(--paper)}
 img{display:block;max-width:100%}
@@ -49,7 +53,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 
 .container{width:min(1240px,92vw);margin-inline:auto}
 .section{padding-block:var(--pad)}
-.section--tint{background:var(--cream)}
+.section--tint{background:transparent;border-block:1px solid var(--line-soft)}
 .section--line{border-top:1px solid var(--line-soft)}
 
 /* type */
@@ -279,7 +283,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 }
 
 /* ============ MARQUEE ============ */
-.marquee{border-block:1px solid var(--line);padding:1.35rem 0;overflow:hidden;background:var(--paper)}
+.marquee{border-block:1px solid var(--line);padding:1.35rem 0;overflow:hidden;background:transparent}
 .marquee-track{display:flex;gap:3rem;width:max-content;animation:mq 46s linear infinite}
 .marquee:hover .marquee-track{animation-play-state:paused}
 .marquee-track span{font:400 1.3rem/1 var(--serif);color:var(--ink);white-space:nowrap;display:flex;align-items:center;gap:3rem}
@@ -309,7 +313,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .not-note{font-style:normal;font-family:var(--serif-it);font-size:1.05rem;color:var(--gold-deep);text-align:right}
 
 /* ============ FOOTER ============ */
-.site-footer{border-top:1px solid var(--line);background:var(--cream)}
+.site-footer{border-top:1px solid var(--line);background:transparent}
 .footer-cta{padding:var(--pad) 0 clamp(3rem,5vw,4.5rem);display:grid;gap:2.6rem}
 .footer-title{font:400 clamp(2.4rem,5.4vw,4.8rem)/1.1 var(--serif);color:var(--ink);max-width:16ch}
 .contact-rows{border-top:1px solid var(--line)}
@@ -362,14 +366,14 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 
 /* CTA band mid-page */
 .cta-band{
-  border:1px solid var(--line);background:var(--cream);
+  border:1px solid var(--line);background:transparent;
   padding:clamp(2.5rem,5vw,4rem);display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;
 }
 .cta-band h2{font:400 clamp(1.8rem,3.6vw,3rem)/1.15 var(--serif);color:var(--ink);max-width:20ch}
 
 /* ============ MEDIA ============ */
 .media-cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,3vw,2.5rem)}
-.media-card{position:relative;display:block;border:1px solid var(--line);overflow:hidden;background:var(--cream)}
+.media-card{position:relative;display:block;border:1px solid var(--line);overflow:hidden;background:transparent}
 .media-card .mc-img{aspect-ratio:4/3;overflow:hidden}
 .media-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
 .media-card:hover img{transform:scale(1.05)}
@@ -560,9 +564,12 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
   }
   html,body{
     background-color:#F7F7F4 !important;
-    background-image:url("marble-white.jpg") !important;
     color:#56554F !important;
   }
+  body::before{
+    background:#F7F7F4 url("marble-white.jpg") center center / cover no-repeat !important;
+  }
+  .section--tint,.marquee,.site-footer,.media-card,.cta-band{background:transparent !important}
   .display,.hero-title,.footer-title,.band-title,.svc-name,.not-line,.duo-body h2,
   .cta-band h2,.media-card h3,.j-place h3,.p-group-head h2,.cr-value,.brand-word,
   .about-body .display,.page-hero .display,.testimonial blockquote,.founder-caption h3{color:#252420 !important}
