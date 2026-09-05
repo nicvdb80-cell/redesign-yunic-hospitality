@@ -24,8 +24,8 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 html,body{overflow-x:clip}
+html{background-color:var(--paper)}
 body{
-  background-color:var(--paper);
   color:var(--body);
   font:300 1.0625rem/1.75 var(--sans);
   -webkit-font-smoothing:antialiased;
@@ -37,7 +37,7 @@ body::before{
   position:fixed;
   inset:0;
   z-index:-1;
-  background:var(--paper) url("marble-white.jpg") center center / cover no-repeat;
+  background:var(--paper) url("marble-white-v2.jpg") center center / cover no-repeat;
 }
 ::selection{background:var(--gold);color:var(--paper)}
 img{display:block;max-width:100%}
@@ -517,7 +517,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
   position:fixed;inset:0;z-index:2200;
   display:flex;align-items:center;justify-content:center;
   background-color:var(--paper);
-  background-image:url("marble-white.jpg");
+  background-image:url("marble-white-v2.jpg");
   background-size:cover;background-position:center;background-repeat:no-repeat;
   animation:egIn .8s var(--ease);
 }
@@ -562,12 +562,14 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
     --gold:#A48760;--gold-deep:#8A6D4B;--clay:#A9623F;
     --line:rgba(41,39,31,.16);--line-soft:rgba(41,39,31,.09);
   }
-  html,body{
+  html{
     background-color:#F7F7F4 !important;
+  }
+  body{
     color:#56554F !important;
   }
   body::before{
-    background:#F7F7F4 url("marble-white.jpg") center center / cover no-repeat !important;
+    background:#F7F7F4 url("marble-white-v2.jpg") center center / cover no-repeat !important;
   }
   .section--tint,.marquee,.site-footer,.media-card,.cta-band{background:transparent !important}
   .display,.hero-title,.footer-title,.band-title,.svc-name,.not-line,.duo-body h2,
