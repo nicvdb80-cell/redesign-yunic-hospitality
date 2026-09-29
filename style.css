@@ -247,11 +247,16 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .approach-body p{color:var(--ink);font-size:1.1rem;line-height:1.85}
 .approach-body .approach-open{font:400 clamp(1.8rem,2.8vw,2.4rem)/1.15 var(--serif);color:var(--gold-deep);margin-bottom:.3rem}
 .approach-body .approach-close{margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--line);font:400 clamp(1.25rem,1.9vw,1.55rem)/1.55 var(--serif-it);color:var(--ink)}
-.approach-note{
-  margin-top:clamp(3rem,5vw,4.5rem);padding:2.2rem 0 0;border-top:1px solid var(--line);
-  display:flex;gap:1.6rem;align-items:baseline;flex-wrap:wrap;
-}
-.approach-note p{font:500 clamp(1.2rem,2vw,1.6rem)/1.5 var(--serif-it);font-style:normal;color:var(--gold-deep);max-width:52ch}
+.approach-note{margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line);display:grid;gap:.8rem;max-width:34ch}
+.approach-note .small-caps{color:var(--gold-deep)}
+.approach-note p{font:500 clamp(1.1rem,1.5vw,1.3rem)/1.5 var(--serif-it);font-style:normal;color:var(--gold-deep)}
+.section--approach{padding-block:clamp(64px,8vh,110px)}
+.section--approach .display{font-size:clamp(2.3rem,4.4vw,4rem)}
+.section--approach .approach{margin-top:clamp(1.4rem,2.5vw,2rem)}
+.section--approach .approach-ask{margin-top:1.6rem}
+.section--approach .approach-body{gap:1.1rem}
+.section--approach .approach-body p:not(.approach-open):not(.approach-close){font-size:1.05rem;line-height:1.75}
+.section--approach .approach-body .approach-close{margin-top:1rem;padding-top:1.3rem}
 
 /* ============ FEATURE (dinner) ============ */
 .feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,6vw,6.5rem);align-items:center}
