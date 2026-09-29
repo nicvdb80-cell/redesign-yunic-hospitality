@@ -292,7 +292,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .story-ph span{font:500 .68rem/1.9 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep);max-width:26ch}
 .story-photo img{width:100%;height:100%;object-fit:cover}
 .story-open{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2.5rem,6vw,6rem);align-items:end}
-.story-photo--main{aspect-ratio:4/5;margin-left:calc(-1 * clamp(0rem,3vw,3rem))}
+.story-photo--main{aspect-ratio:8/9;margin-left:calc(-1 * clamp(0rem,3vw,3rem))}
 .story-text--open{padding-bottom:clamp(0rem,3vw,2.5rem)}
 .story .story-lead{font:400 clamp(1.5rem,2.3vw,1.9rem)/1.3 var(--serif);color:var(--ink)}
 .story-pause{
@@ -317,7 +317,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .story-final em{font-style:normal;color:var(--gold-deep)}
 @media(max-width:920px){
   .story-open,.story-mid,.story-connect,.story-honest{grid-template-columns:1fr}
-  .story-photo--main{margin-left:0;aspect-ratio:4/5}
+  .story-photo--main{margin-left:0}
   .story-photo--second{margin-top:.5rem;justify-self:start;max-width:78%}
   .story-pause{margin:3.5rem 0 3.5rem 0}
   .story .story-kicker,.story .story-quote,.story-text--connect{grid-column:1}
