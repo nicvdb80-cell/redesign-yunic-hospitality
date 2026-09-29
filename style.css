@@ -308,10 +308,12 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .story-mid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:clamp(2.5rem,7vw,7rem);align-items:start}
 .story .story-turn{font:400 clamp(1.35rem,2vw,1.7rem)/1.3 var(--serif);color:var(--gold-deep);margin-top:1rem}
 .story-photo--second{aspect-ratio:3/4;margin-top:clamp(-6rem,-8vw,0rem);max-width:380px;justify-self:end;width:100%}
-.story-connect{margin-top:clamp(4.5rem,9vw,8rem);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:clamp(2.5rem,6vw,6rem);row-gap:1.2rem;align-items:start}
-.story .story-kicker{grid-column:1;font:500 .7rem/1.8 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);padding-top:1.1rem}
-.story .story-quote{grid-column:2;font:400 clamp(1.8rem,3.4vw,2.9rem)/1.2 var(--serif);color:var(--ink);max-width:20ch}
-.story-text--connect{grid-column:2;margin-top:1.2rem}
+.story-connect{margin-top:clamp(4.5rem,9vw,8rem);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.story-connect-body{display:grid;gap:1.2rem}
+.story-photo--connect{aspect-ratio:4/5;max-width:420px;width:100%}
+.story .story-kicker{font:500 .7rem/1.8 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);align-self:end}
+.story .story-quote{font:400 clamp(1.8rem,3.4vw,2.9rem)/1.2 var(--serif);color:var(--ink);max-width:20ch}
+.story-text--connect{margin-top:1.2rem}
 .story-honest{margin-top:clamp(4.5rem,9vw,8rem);padding-top:clamp(2.5rem,5vw,4rem);border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(2rem,6vw,6rem);align-items:start}
 .story .story-break{font:400 clamp(1.7rem,3vw,2.6rem)/1.2 var(--serif);color:var(--ink);max-width:18ch}
 .story-honest .story-text{padding-top:.5rem}
@@ -325,8 +327,8 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
   .story-photo--main{margin-left:0}
   .story-photo--second{margin-top:.5rem;justify-self:start;max-width:78%}
   .story-pause{margin:3.5rem 0 3.5rem 0}
-  .story .story-kicker,.story .story-quote,.story-text--connect{grid-column:1}
-  .story .story-kicker{padding-top:0}
+  .story-photo--connect{max-width:78%}
+  .story-connect{gap:2rem}
   .story .story-final{margin-top:4.5rem;text-align:left;margin-left:0}
 }
 
