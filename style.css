@@ -241,15 +241,12 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .band p{max-width:44ch;color:#3d3a30}
 
 /* ============ APPROACH ============ */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(1.5rem,3vw,3rem);margin-top:clamp(3rem,5vw,4.5rem)}
-.step{border-top:1px solid var(--line);padding-top:1.6rem;position:relative}
-.step-num{
-  font:400 clamp(3.4rem,5.5vw,5rem)/1 var(--serif);
-  color:transparent;-webkit-text-stroke:1px var(--gold);
-  display:block;margin-bottom:1.1rem;
-}
-.step h3{font:400 1.5rem var(--serif);color:var(--ink);margin-bottom:.6rem}
-.step p{font-size:.95rem;line-height:1.7}
+.approach{display:grid;grid-template-columns:minmax(0,38fr) minmax(0,52fr);justify-content:space-between;gap:clamp(2.5rem,6vw,6rem);margin-top:clamp(1.8rem,3vw,2.6rem);align-items:start}
+.approach-ask{margin-top:2.2rem;font:400 1.15rem/1.9 var(--sans);color:var(--ink)}
+.approach-body{border-left:1px solid var(--gold);padding-left:clamp(1.8rem,4vw,3.6rem);display:grid;gap:1.3rem;max-width:58ch;margin-top:.6rem}
+.approach-body p{color:var(--ink);font-size:1.1rem;line-height:1.85}
+.approach-body .approach-open{font:400 clamp(1.8rem,2.8vw,2.4rem)/1.15 var(--serif);color:var(--gold-deep);margin-bottom:.3rem}
+.approach-body .approach-close{margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--line);font:400 clamp(1.25rem,1.9vw,1.55rem)/1.55 var(--serif-it);color:var(--ink)}
 .approach-note{
   margin-top:clamp(3rem,5vw,4.5rem);padding:2.2rem 0 0;border-top:1px solid var(--line);
   display:flex;gap:1.6rem;align-items:baseline;flex-wrap:wrap;
@@ -428,10 +425,11 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 
 /* ============ RESPONSIVE ============ */
 @media(max-width:1080px){
-  .steps{grid-template-columns:repeat(2,1fr)}
   .gal-grid{columns:2}
 }
 @media(max-width:920px){
+  .approach{grid-template-columns:1fr}
+  .approach-body{border-left:0;padding-left:0;border-top:1px solid var(--gold);padding-top:2rem;margin-top:0}
   .nav-links,.nav-cta{display:none}
   .nav-toggle{display:flex}
   .hero{padding-top:7.5rem}
@@ -449,7 +447,6 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
   .cr-label{grid-area:label}.cr-value{grid-area:value}.cr-arrow{grid-area:arrow}
 }
 @media(max-width:560px){
-  .steps{grid-template-columns:1fr}
   .gal-grid{columns:1}
   .not-row{grid-template-columns:1fr;gap:.5rem}
   .not-note{text-align:left}
