@@ -363,13 +363,15 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .not-note{font-style:normal;font-family:var(--serif-it);font-size:1.05rem;color:var(--gold-deep);text-align:right}
 
 /* ============ SHAPED AROUND YOU ============ */
-.shaped{min-height:min(88vh,860px);display:flex;align-items:center}
-.shaped-inner{display:grid;gap:clamp(2.5rem,5vw,4.5rem)}
-.shaped-title{font:400 clamp(2.6rem,6vw,5.4rem)/1.04 var(--serif);color:var(--ink);letter-spacing:.01em}
+.shaped{padding-block:clamp(48px,7vh,88px) clamp(24px,4vh,48px)}
+.shaped-inner{display:grid;gap:clamp(1.2rem,3vh,2.4rem)}
+.shaped-title{font:400 clamp(2.3rem,4.6vw,4.2rem)/1.04 var(--serif);color:var(--ink);letter-spacing:.01em}
 .shaped-title em{font-style:normal;font-weight:500;color:var(--gold-deep)}
-.shaped-body{display:grid;gap:1.8rem;max-width:44ch;justify-self:end;margin-right:clamp(0rem,6vw,6rem)}
-.shaped-list{color:var(--ink);font-size:1.12rem;line-height:1.85}
-.shaped-close{padding-top:1.5rem;border-top:1px solid var(--line);font:400 clamp(1.3rem,2vw,1.65rem)/1.4 var(--serif);color:var(--ink)}
+.shaped-body{display:grid;gap:1.3rem;max-width:44ch;justify-self:end;margin-right:clamp(0rem,6vw,6rem)}
+.shaped-list{color:var(--ink);font-size:1.08rem;line-height:1.75}
+.shaped-close{padding-top:1.2rem;border-top:1px solid var(--line);font:400 clamp(1.25rem,1.8vw,1.55rem)/1.4 var(--serif);color:var(--ink)}
+.shaped + .site-footer .footer-cta{padding-top:clamp(28px,5vh,56px);gap:clamp(1.2rem,2.6vh,2rem)}
+.shaped + .site-footer .footer-title{font-size:clamp(2.2rem,4.4vw,3.8rem)}
 @media(max-width:920px){
   .shaped{min-height:0}
   .shaped-body{justify-self:start;margin-right:0}
