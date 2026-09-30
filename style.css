@@ -362,6 +362,13 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .in .not-line::after{width:102%}
 .not-note{font-style:normal;font-family:var(--serif-it);font-size:1.05rem;color:var(--gold-deep);text-align:right}
 
+/* ============ DIVE & DINE — who we work with ============ */
+.dd-types{margin-top:2.4rem;border-top:1px solid var(--line)}
+.dd-type{padding:1.6rem 0;border-bottom:1px solid var(--line);display:grid;gap:.6rem}
+.dd-type .small-caps{color:var(--gold-deep);font-weight:500}
+.dd-type p{color:var(--ink);line-height:1.8}
+.dd-close{margin-top:.6rem;padding-top:1.4rem;border-top:1px solid var(--line);font:400 clamp(1.25rem,1.8vw,1.5rem)/1.45 var(--serif);color:var(--ink)}
+
 /* ============ SHAPED AROUND YOU ============ */
 .shaped{padding-block:clamp(48px,7vh,88px) clamp(24px,4vh,48px)}
 .shaped-inner{display:grid;gap:clamp(1.2rem,3vh,2.4rem)}
