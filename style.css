@@ -369,6 +369,11 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .dd-type p{color:var(--ink);line-height:1.8}
 .dd-close{margin-top:.6rem;padding-top:1.4rem;border-top:1px solid var(--line);font:400 clamp(1.25rem,1.8vw,1.5rem)/1.45 var(--serif);color:var(--ink)}
 
+/* ============ YUNIC DINING ============ */
+.dining-note{margin-top:1.8rem;font:400 1.05rem/1.6 var(--serif);color:var(--gold-deep);max-width:44ch}
+.dining-signature{margin-top:2.2rem;padding-top:1.8rem;border-top:1px solid var(--line);display:grid;gap:.9rem}
+.dining-signature p:not(.eyebrow){color:var(--ink)}
+
 /* ============ SHAPED AROUND YOU ============ */
 .shaped{padding-block:clamp(48px,7vh,88px) clamp(24px,4vh,48px)}
 .shaped-inner{display:grid;gap:clamp(1.2rem,3vh,2.4rem)}
