@@ -1,4 +1,16 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/private-chef",
+      "destination": "/yunic-dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef.html",
+      "destination": "/yunic-dining",
+      "permanent": true
+    }
+  ]
 }
