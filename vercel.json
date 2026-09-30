@@ -11,6 +11,26 @@
       "source": "/private-chef.html",
       "destination": "/yunic-dining",
       "permanent": true
+    },
+    {
+      "source": "/consulting",
+      "destination": "/culinary",
+      "permanent": true
+    },
+    {
+      "source": "/consulting.html",
+      "destination": "/culinary",
+      "permanent": true
+    },
+    {
+      "source": "/private-dinner",
+      "destination": "/yunic-dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-dinner.html",
+      "destination": "/yunic-dining",
+      "permanent": true
     }
   ]
 }
