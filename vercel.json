@@ -2,7 +2,35 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/(.*)\\.html", "destination": "/", "permanent": false },
-    { "source": "/((?!.*\\.[A-Za-z0-9]+$).+)", "destination": "/", "permanent": false }
+    {
+      "source": "/private-chef",
+      "destination": "/yunic-dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef.html",
+      "destination": "/yunic-dining",
+      "permanent": true
+    },
+    {
+      "source": "/consulting",
+      "destination": "/culinary",
+      "permanent": true
+    },
+    {
+      "source": "/consulting.html",
+      "destination": "/culinary",
+      "permanent": true
+    },
+    {
+      "source": "/private-dinner",
+      "destination": "/yunic-dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-dinner.html",
+      "destination": "/yunic-dining",
+      "permanent": true
+    }
   ]
 }
