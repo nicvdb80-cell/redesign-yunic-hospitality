@@ -370,9 +370,18 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .dd-close{margin-top:.6rem;padding-top:1.4rem;border-top:1px solid var(--line);font:400 clamp(1.25rem,1.8vw,1.5rem)/1.45 var(--serif);color:var(--ink)}
 
 /* ============ YUNIC DINING ============ */
-.dining-note{margin-top:1.8rem;font:400 1.05rem/1.6 var(--serif);color:var(--gold-deep);max-width:44ch}
-.dining-signature{margin-top:2.2rem;padding-top:1.8rem;border-top:1px solid var(--line);display:grid;gap:.9rem}
-.dining-signature p:not(.eyebrow){color:var(--ink)}
+.dining-intro{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(2.5rem,7vw,7rem);align-items:start}
+.dining-photo{margin:0;max-width:300px;width:100%;justify-self:end}
+.dining-photo img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block}
+.dining-copy{display:grid;gap:1.4rem;max-width:56ch}
+.dining-copy p{color:var(--ink);font-size:1.08rem;line-height:1.85}
+.dining-copy .dining-formats{margin-top:.8rem;padding-block:1.3rem;border-block:1px solid var(--line);font:500 .72rem/2 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold-deep)}
+.dining-formats i{font-style:normal;margin:0 .5em;color:var(--line)}
+.dining-copy .dining-statement{font:400 clamp(1.4rem,2.2vw,1.85rem)/1.35 var(--serif);color:var(--ink)}
+@media(max-width:920px){
+  .dining-intro{grid-template-columns:1fr}
+  .dining-photo{justify-self:start;max-width:220px}
+}
 
 /* ============ SHAPED AROUND YOU ============ */
 .shaped{padding-block:clamp(48px,7vh,88px) clamp(24px,4vh,48px)}
