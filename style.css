@@ -209,6 +209,10 @@ h1 em,h2 em,h3 em{
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,7rem);align-items:start}
 .split .display{position:sticky;top:8rem}
 .split-body{padding-top:.8rem;display:grid;gap:1.6rem}
+.split--photo .display{position:static}
+.split-photo{margin:clamp(1.6rem,3vw,2.6rem) 0 0;border-radius:2px;overflow:hidden;max-width:440px;box-shadow:0 10px 30px rgba(41,39,31,.09)}
+.split-photo img{width:100%;height:auto;display:block}
+@media(max-width:920px){.split-photo{max-width:100%;margin-top:1.4rem}}
 .split-body p strong{color:var(--ink);font-weight:500}
 
 /* ============ SERVICES MENU ============ */
