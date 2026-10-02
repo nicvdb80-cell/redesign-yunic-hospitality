@@ -17,7 +17,7 @@
   --serif:'Cormorant SC',serif;
   --serif-it:'Cormorant',serif;
   --sans:'DM Sans',sans-serif;
-  --pad:clamp(72px,10vw,140px);
+  --pad:clamp(44px,6vw,84px);
   --ease:cubic-bezier(.19,1,.22,1);
 }
 
