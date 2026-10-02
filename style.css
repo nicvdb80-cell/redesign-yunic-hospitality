@@ -53,6 +53,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 
 .container{width:min(1240px,92vw);margin-inline:auto}
 .section{padding-block:var(--pad)}
+.section--compact{padding-block:clamp(40px,5vw,72px)}
 .section--tint{background:transparent;border-block:1px solid var(--line-soft)}
 .section--line{border-top:1px solid var(--line-soft)}
 
