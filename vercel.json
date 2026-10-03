@@ -2,35 +2,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    {
-      "source": "/private-chef",
-      "destination": "/yunic-dining",
-      "permanent": true
-    },
-    {
-      "source": "/private-chef.html",
-      "destination": "/yunic-dining",
-      "permanent": true
-    },
-    {
-      "source": "/consulting",
-      "destination": "/culinary",
-      "permanent": true
-    },
-    {
-      "source": "/consulting.html",
-      "destination": "/culinary",
-      "permanent": true
-    },
-    {
-      "source": "/private-dinner",
-      "destination": "/yunic-dining",
-      "permanent": true
-    },
-    {
-      "source": "/private-dinner.html",
-      "destination": "/yunic-dining",
-      "permanent": true
-    }
+    { "source": "/yunic-dining", "destination": "https://yunicdining.com", "permanent": true },
+    { "source": "/yunic-dining.html", "destination": "https://yunicdining.com", "permanent": true },
+    { "source": "/private-chef", "destination": "https://yunicdining.com", "permanent": true },
+    { "source": "/private-chef.html", "destination": "https://yunicdining.com", "permanent": true },
+    { "source": "/private-dinner", "destination": "https://yunicdining.com", "permanent": true },
+    { "source": "/private-dinner.html", "destination": "https://yunicdining.com", "permanent": true },
+    { "source": "/consulting", "destination": "/culinary", "permanent": true },
+    { "source": "/consulting.html", "destination": "/culinary", "permanent": true }
   ]
 }
