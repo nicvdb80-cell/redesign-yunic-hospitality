@@ -191,39 +191,70 @@
     tryResume();
   }
 
-  /* testimonial slider — one at a time, cross-fade, dots + autoplay */
+  /* testimonial slider — one at a time, swipeable (drag left/right) + dots + autoplay */
   var slider = document.querySelector('.t-slider');
   if (slider) {
+    var viewport = slider.querySelector('.t-viewport');
+    var track = slider.querySelector('.t-track');
     var slides = Array.prototype.slice.call(slider.querySelectorAll('.t-slide'));
     var dotsWrap = slider.querySelector('.t-dots');
-    if (slides.length > 1 && dotsWrap) {
+    if (slides.length > 1 && track && viewport && dotsWrap) {
       var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       var delay = parseInt(slider.getAttribute('data-autoplay'), 10) || 7000;
-      var idx = 0, timer = null;
+      var idx = 0, timer = null, W = 0, startX = 0, dragging = false;
 
       var dots = slides.map(function (s, i) {
         var b = document.createElement('button');
         b.type = 'button';
         b.setAttribute('role', 'tab');
         b.setAttribute('aria-label', 'Testimonial ' + (i + 1));
-        if (i === 0) b.className = 'is-active';
-        b.addEventListener('click', function () { go(i, true); });
+        if (i === 0) { b.className = 'is-active'; b.setAttribute('aria-selected', 'true'); }
+        b.addEventListener('click', function () { go(i); start(); });
         dotsWrap.appendChild(b);
         return b;
       });
 
-      function show(n) {
-        slides.forEach(function (s, i) {
-          s.classList.toggle('is-active', i === n);
-          dots[i].classList.toggle('is-active', i === n);
-          dots[i].setAttribute('aria-selected', i === n ? 'true' : 'false');
+      function setX(px) { track.style.transform = 'translate3d(' + px + 'px,0,0)'; }
+      function render() {
+        W = viewport.clientWidth;
+        setX(-idx * W);
+        dots.forEach(function (d, i) {
+          var a = i === idx;
+          d.classList.toggle('is-active', a);
+          d.setAttribute('aria-selected', a ? 'true' : 'false');
         });
-        idx = n;
       }
-      function next() { show((idx + 1) % slides.length); }
+      function go(n) { idx = ((n % slides.length) + slides.length) % slides.length; render(); }
+      function next() { go(idx + 1); }
       function start() { if (!reduce) { stop(); timer = window.setInterval(next, delay); } }
       function stop() { if (timer) { window.clearInterval(timer); timer = null; } }
-      function go(n, user) { show(n); if (user) start(); }
+
+      /* drag / swipe via pointer events (covers mouse + touch) */
+      track.addEventListener('pointerdown', function (e) {
+        dragging = true; startX = e.clientX; W = viewport.clientWidth;
+        track.classList.add('is-dragging'); stop();
+        try { track.setPointerCapture(e.pointerId); } catch (_) {}
+      });
+      track.addEventListener('pointermove', function (e) {
+        if (!dragging) return;
+        var dx = e.clientX - startX, base = -idx * W, pos = base + dx;
+        if ((idx === 0 && dx > 0) || (idx === slides.length - 1 && dx < 0)) pos = base + dx * 0.35;
+        setX(pos);
+      });
+      function end(e) {
+        if (!dragging) return;
+        dragging = false;
+        track.classList.remove('is-dragging');
+        var dx = (typeof e.clientX === 'number' ? e.clientX : startX) - startX;
+        var threshold = Math.min(80, W * 0.18);
+        if (dx <= -threshold) idx = Math.min(idx + 1, slides.length - 1);
+        else if (dx >= threshold) idx = Math.max(idx - 1, 0);
+        render();
+        start();
+      }
+      track.addEventListener('pointerup', end);
+      track.addEventListener('pointercancel', end);
+      track.addEventListener('dragstart', function (e) { e.preventDefault(); });
 
       slider.addEventListener('mouseenter', stop);
       slider.addEventListener('mouseleave', start);
@@ -232,7 +263,9 @@
       document.addEventListener('visibilitychange', function () {
         if (document.hidden) stop(); else start();
       });
+      window.addEventListener('resize', render, { passive: true });
 
+      render();
       start();
     } else if (dotsWrap) {
       dotsWrap.style.display = 'none';
