@@ -347,14 +347,22 @@ h1 em,h2 em,h3 em{
 @keyframes mq{to{transform:translateX(-50%)}}
 
 /* ============ TESTIMONIAL ============ */
-.testimonial{max-width:1080px;margin-inline:auto;display:grid;gap:clamp(2rem,4vw,3rem)}
-.quote-mark{font:400 4.2rem/0.4 var(--serif);color:var(--gold);height:1.7rem;display:block}
-.testimonial-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4.5rem)}
-.t-item{margin:0;display:grid;gap:1.3rem;align-content:start}
-.t-item blockquote{font:400 clamp(1.3rem,1.9vw,1.75rem)/1.45 var(--serif);color:var(--ink)}
-.t-item figcaption{font:500 .68rem/1.8 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--body)}
-.t-item figcaption b{color:var(--gold-deep);font-weight:500}
-@media(max-width:820px){.testimonial-grid{grid-template-columns:1fr;gap:2.8rem}}
+.testimonial{max-width:900px;margin-inline:auto;display:grid;gap:clamp(2rem,4vw,2.8rem);justify-items:center}
+.quote-mark{font:400 5rem/0.4 var(--serif);color:var(--gold);height:2rem;display:block}
+/* testimonial slider — one at a time, cross-fade */
+.t-slider{width:100%}
+.t-track{display:grid}
+.t-slide{grid-area:1/1;margin:0;display:flex;flex-direction:column;align-items:center;gap:1.4rem;text-align:center;
+  opacity:0;visibility:hidden;transition:opacity .7s var(--ease);pointer-events:none}
+.t-slide.is-active{opacity:1;visibility:visible;pointer-events:auto}
+.t-slide blockquote{font:400 clamp(1.45rem,2.6vw,2.15rem)/1.4 var(--serif);color:var(--ink);max-width:28ch}
+.t-slide figcaption{font:500 .7rem/1.9 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--body)}
+.t-slide figcaption b{color:var(--gold-deep);font-weight:500}
+.t-dots{display:flex;gap:.65rem;justify-content:center;margin-top:clamp(1.8rem,3vw,2.6rem)}
+.t-dots button{width:8px;height:8px;padding:0;border-radius:50%;border:1px solid var(--gold);background:transparent;cursor:pointer;transition:background .35s var(--ease),transform .35s var(--ease)}
+.t-dots button:hover{background:rgba(164,135,96,.4)}
+.t-dots button.is-active{background:var(--gold);transform:scale(1.15)}
+@media(prefers-reduced-motion:reduce){.t-slide{transition:none}}
 
 /* ============ NOT LIST ============ */
 .not-list{display:grid}
@@ -683,5 +691,5 @@ h1 em,h2 em,h3 em{
   .section--tint,.marquee,.site-footer,.media-card,.cta-band{background:transparent !important}
   .display,.hero-title,.footer-title,.band-title,.svc-name,.not-line,.duo-body h2,
   .cta-band h2,.media-card h3,.j-place h3,.p-group-head h2,.cr-value,.brand-word,
-  .about-body .display,.page-hero .display,.testimonial blockquote,.t-item blockquote,.founder-caption h3{color:#252420 !important}
+  .about-body .display,.page-hero .display,.testimonial blockquote,.t-slide blockquote,.founder-caption h3{color:#252420 !important}
 }
