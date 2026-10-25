@@ -1,0 +1,22 @@
+/* Yunic Dining articles & guides — brings older standalone pages onto the Yunic Hospitality design system */
+:root{--jade:#252420;--bronze:#8A6D4B;--cream:#F7F7F4;--parchment:#EFEFEA;--ink:#252420;--muted:#3B3A35;--line:rgba(41,39,31,.16)}
+html{background:#F7F7F4}
+body{background:#F7F7F4 url("/marble-white-v2.jpg") center/cover no-repeat fixed;color:#3B3A35;font-weight:300;font-size:16px}
+h1,h2,h3,details summary,.logo{font-family:"Cormorant SC",serif!important;font-weight:400}
+.nav{background:rgba(247,247,244,.92);border-bottom:1px solid rgba(41,39,31,.09)}
+.logo{display:flex;align-items:center;gap:12px;font-size:18px!important;letter-spacing:.14em!important;color:#252420}
+.logo img{width:34px;height:34px;object-fit:contain}
+.logo em{font-family:"Cormorant",serif;font-style:normal;letter-spacing:.02em;text-transform:none;color:#8A6D4B}
+.back{color:#8A6D4B}
+.eyebrow,.card-label,.faq-cat{color:#8A6D4B}
+.btn{border-color:#252420;color:#252420;border-radius:999px}
+.btn:hover{background:#252420;color:#F7F7F4}
+.section a{color:#252420;border-bottom-color:rgba(41,39,31,.25)}
+.section a:hover{color:#8A6D4B;opacity:1}
+.card{background:rgba(247,247,244,.7);border-color:rgba(41,39,31,.16)}
+details summary{font-size:20px!important}
+footer{background:transparent;border-top:1px solid rgba(41,39,31,.16);color:#3B3A35}
+footer p,footer a{color:#3B3A35!important}
+footer a{border-bottom-color:rgba(41,39,31,.25)!important}
+::selection{background:rgba(164,135,96,.22);color:#252420}
+@media(max-width:420px){.logo em{display:none}}

@@ -1,0 +1,108 @@
+/* ============================================================
+   YUNIC DINING section — extends /style.css (scoped to body.dn)
+   ============================================================ */
+.dn .sec-head{max-width:780px}
+.dn .sec-head .display{margin:1.4rem 0 1.6rem;max-width:22ch}
+.dn .sec-head p+p{margin-top:1rem}
+.dn .sec-head p{color:var(--ink)}
+
+/* flip cards */
+.dn .flip-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:3rem;perspective:1400px;max-width:920px;margin-inline:auto}
+.dn .flip{position:relative;display:grid;transform-style:preserve-3d;transition:transform .8s var(--ease),opacity .9s var(--ease);cursor:pointer;outline:none}
+.dn .flip.rv{transform:none}
+.dn .flip.rv.in:hover,.dn .flip.flipped,.dn .flip.rv.in.flipped{transform:rotateY(180deg)}
+.dn .flip:focus-visible .face:not(.back){outline:2px solid var(--gold-deep);outline-offset:3px}
+.dn .face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid var(--line);display:flex;flex-direction:column;background:var(--paper);overflow:hidden;min-height:540px}
+.dn .face.back{transform:rotateY(180deg);background:var(--ink);border-color:var(--ink);padding:2rem 1.8rem}
+.dn .face-front-head{padding:1.6rem 1.6rem 1.2rem;min-height:12.5rem}
+.dn .menu-no{font:500 .64rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
+.dn .face h3{font:400 clamp(1.3rem,1.6vw,1.6rem)/1.15 var(--serif);color:var(--ink);margin:.7rem 0 .8rem}
+.dn .face .menu-desc{font-size:.92rem;line-height:1.6;color:var(--ink)}
+.dn .menu-price{font:500 .66rem/1.6 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-deep);margin-top:.9rem;display:block}
+.dn .face .menu-img{flex:1;min-height:150px;max-height:230px;overflow:hidden}
+.dn .face .menu-img img{width:100%;height:100%;object-fit:cover;display:block}
+.dn .face-front-foot{padding:.9rem 1.6rem;border-top:1px solid var(--line-soft)}
+.dn .face-front-foot span{font:500 .62rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
+.dn .course-list{display:flex;flex-direction:column;gap:1rem;height:100%;justify-content:center}
+.dn .course-list .menu-no{color:var(--gold)}
+.dn .back-text p{color:rgba(247,247,244,.88);font-size:.92rem;line-height:1.7}
+.dn .back-text p+p{margin-top:.8rem}
+.dn .back-text .tlink{margin-top:1.4rem;color:var(--paper);border-color:var(--gold);display:inline-flex}
+.dn .back-text .tlink:hover{color:var(--gold)}
+
+/* sample menus */
+.dn .sample-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.4rem;margin:2.6rem 0 2rem}
+.dn .sample-grid article{border-top:1px solid var(--line);padding-top:1.4rem}
+.dn .sample-grid h3{font:400 1.5rem/1.2 var(--serif);color:var(--ink);margin-bottom:1rem}
+.dn .sample-grid p{line-height:1.95;color:var(--ink);font-size:.98rem}
+.dn .sample-note{max-width:64ch;margin-bottom:1.4rem}
+
+/* band copy */
+.dn .band-copy{max-width:44ch;color:var(--ink)}
+
+/* image split */
+.dn .image-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.dn .image-split .display{font-size:clamp(1.8rem,3vw,2.6rem);margin:1.4rem 0 1.6rem}
+.dn .image-split p{color:var(--ink)}
+.dn .image-split p+p{margin-top:1rem}
+.dn .frame-img{width:100%;height:100%;min-height:320px;max-height:460px;object-fit:cover;display:block;border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:10px}
+.dn .frame-img--tall{max-height:560px}
+
+/* FAQ */
+.dn .faq-list{border-top:1px solid var(--line)}
+.dn .faq-list details{border-bottom:1px solid var(--line-soft);padding:1.2rem 0}
+.dn .faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;font:400 clamp(1.15rem,1.6vw,1.35rem)/1.35 var(--serif);color:var(--ink)}
+.dn .faq-list summary::-webkit-details-marker{display:none}
+.dn .faq-list summary::after{content:"+";font:300 1.4rem/1 var(--sans);color:var(--gold-deep);transition:transform .3s var(--ease)}
+.dn .faq-list details[open] summary::after{transform:rotate(45deg)}
+.dn .faq-list details p{margin-top:.8rem;color:var(--ink);line-height:1.8;max-width:60ch}
+.dn .faq-more{margin-top:2rem}
+
+/* journal */
+.dn .journal-list{margin-top:3rem;border-top:1px solid var(--line)}
+.dn .journal-item{display:grid;grid-template-columns:160px 1fr auto;gap:1.6rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--line-soft);transition:padding .35s var(--ease)}
+.dn a.journal-item:hover{padding-left:.8rem}
+.dn .journal-item time{font:500 .64rem/1.5 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep)}
+.dn .journal-item h3{font:400 1.3rem/1.3 var(--serif);color:var(--ink)}
+.dn .journal-item p{font-size:.92rem;margin-top:.3rem}
+.dn .journal-item .arrow{color:var(--gold-deep);font-size:1.1rem}
+.dn .area-links{margin-top:2.2rem;font-size:.9rem;line-height:2}
+.dn .area-links a{color:var(--ink);border-bottom:1px solid var(--line)}
+.dn .area-links a:hover{color:var(--gold-deep);border-color:var(--gold-deep)}
+
+/* enquiry */
+.dn .contact-grid{display:grid;grid-template-columns:1fr .9fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
+.dn .contact-grid .display{font-size:clamp(2rem,3.8vw,3.4rem);margin:1.4rem 0 1.6rem}
+.dn .contact-grid > div > p{color:var(--ink)}
+.dn .contact-grid > div > p+p{margin-top:1rem}
+.dn .form{border:1px solid var(--line);padding:2.2rem;background:rgba(247,247,244,.7)}
+.dn .form label{display:block;font:500 .62rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);margin:1.3rem 0 .5rem}
+.dn .form label:first-child{margin-top:0}
+.dn .form input,.dn .form textarea{width:100%;border:0;border-bottom:1px solid var(--line);padding:.7rem 0;background:transparent;color:var(--ink);outline:none;font:400 .98rem var(--sans);transition:border-color .3s;border-radius:0}
+.dn .form input:focus,.dn .form textarea:focus{border-color:var(--gold-deep)}
+.dn .form textarea{min-height:100px;resize:vertical}
+.dn .form .btn{margin-top:1.8rem;width:100%;justify-content:center;background:var(--ink);color:var(--paper)}
+.dn .form .btn:hover{background:transparent;color:var(--ink)}
+.dn .form-note{margin-top:1rem;font-size:.82rem;line-height:1.6}
+.dn .form-note a{color:var(--ink);border-bottom:1px solid var(--line)}
+
+@media(max-width:900px){
+  .dn .flip-grid{grid-template-columns:1fr;perspective:none}
+  .dn .flip{max-width:560px;margin-inline:auto;width:100%}
+  .dn .face-front-head{min-height:0}
+  .dn .sample-grid,.dn .image-split,.dn .contact-grid{grid-template-columns:1fr}
+  .dn .journal-item{grid-template-columns:1fr auto;gap:.4rem 1rem}
+  .dn .journal-item time{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .dn .face{min-height:500px}
+  .dn .form{padding:1.6rem}
+}
+.dn .drinks-img{max-width:440px;justify-self:center;aspect-ratio:439/574;max-height:none;min-height:0;height:auto}
+@media(max-width:900px){.dn .frame-img{width:calc(100% - 24px);margin-inline:auto}}
+/* footer links + slim footer (Dining pages) */
+.dn .footer-base .footer-links a{color:var(--ink);transition:color .3s}
+.dn .footer-base .footer-links a:hover{color:var(--gold-deep)}
+.dn .site-footer--slim .footer-base{padding-top:2.6rem}
+.dn .nav-links a[aria-current="page"]{color:var(--ink)}
+.dn .nav-links a[aria-current="page"]::after{width:100%}

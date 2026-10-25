@@ -89,7 +89,7 @@
   var TIME_KEY = 'yunic-music-time';
 
   var audio = document.createElement('audio');
-  audio.src = 'background-track.mp3';
+  audio.src = '/background-track.mp3';
   audio.loop = true;
   /* 'metadata' (not 'none') so duration loads immediately on every page,
      letting us restore the saved playback position before audio starts */
