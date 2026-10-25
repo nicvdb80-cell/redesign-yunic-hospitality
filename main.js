@@ -89,7 +89,7 @@
   var TIME_KEY = 'yunic-music-time';
 
   var audio = document.createElement('audio');
-  audio.src = 'background-track.mp3';
+  audio.src = '/background-track.mp3';
   audio.loop = true;
   /* 'metadata' (not 'none') so duration loads immediately on every page,
      letting us restore the saved playback position before audio starts */
@@ -163,7 +163,7 @@
     gate.className = 'entry-gate';
     gate.innerHTML =
       '<div class="eg-inner">' +
-        '<img src="yunic-logo-gold.png" alt="Yunic Hospitality" class="eg-logo">' +
+        '<img src="/yunic-logo-gold.png" alt="Yunic Hospitality" class="eg-logo">' +
         '<p class="eg-word">Yunic Hospitality</p>' +
         '<button type="button" class="btn eg-enter"><span>Enter</span></button>' +
         '<button type="button" class="eg-skip">Continue without sound</button>' +

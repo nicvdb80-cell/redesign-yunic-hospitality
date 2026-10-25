@@ -695,3 +695,13 @@ h1 em,h2 em,h3 em{
   .cta-band h2,.media-card h3,.j-place h3,.p-group-head h2,.cr-value,.brand-word,
   .about-body .display,.page-hero .display,.testimonial blockquote,.t-slide blockquote,.founder-caption h3{color:#252420 !important}
 }
+
+/* footer section links */
+.footer-base .footer-links a{color:var(--ink);transition:color .3s}
+.footer-base .footer-links a:hover{color:var(--gold-deep)}
+.site-footer--slim .footer-base{padding-top:2.6rem}
+.nav-links{gap:2rem}
+.follow-inner{text-align:center;display:grid;justify-items:center;gap:1.4rem}
+.follow-inner .display{max-width:20ch}
+.follow-inner p{max-width:48ch;color:var(--ink)}
+.follow-inner .btn{margin-top:.6rem}
