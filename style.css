@@ -169,10 +169,11 @@ h1 em,h2 em,h3 em{
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .hero-eyebrow{margin-bottom:2.2rem}
 .hero-title{
-  font:400 clamp(3.2rem,7.4vw,6.8rem)/1.02 var(--serif);
-  color:var(--ink);
+  font:500 clamp(2rem,3.7vw,3.4rem)/1.12 var(--serif-it);font-style:normal;
+  color:var(--ink);letter-spacing:.005em;
 }
-.hero-sub{margin-top:2.2rem;max-width:40ch;font-size:1.12rem;line-height:1.8}
+.hero-sub{margin-top:2.2rem;max-width:44ch;font-size:1.12rem;line-height:1.8;color:#3B3A35}
+.hero-sub--2{margin-top:1rem}
 .hero-actions{margin-top:2.8rem;display:flex;align-items:center;gap:2.2rem;flex-wrap:wrap}
 .hero-visual{position:relative;justify-self:end;width:min(100%,430px)}
 .arch{
@@ -581,7 +582,7 @@ h1 em,h2 em,h3 em{
   .brand-word{font-size:.82rem;letter-spacing:.08em}
   .nav-toggle{padding:.75rem .5rem}
   .hero{padding-top:6.5rem}
-  .hero-title{font-size:clamp(2.5rem,11vw,3.4rem)}
+  .hero-title{font-size:clamp(1.9rem,8vw,2.4rem)}
   .hero-sub{font-size:1rem}
   .hero-actions{gap:1.3rem}
   .page-hero{padding:8rem 0 clamp(2.2rem,6vw,3rem)}
