@@ -66,7 +66,7 @@ button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
 .eyebrow::before{content:"";width:2.6rem;height:1px;background:var(--gold)}
 .eyebrow--plain::before{display:none}
 .display{
-  font:400 clamp(2.5rem,5.2vw,4.6rem)/1.08 var(--serif);
+  font:400 clamp(1.8rem,3.2vw,2.75rem)/1.18 var(--serif);
   color:var(--ink);letter-spacing:.01em;
 }
 .display em,.hero-title em,.footer-title em,.band-title em,.cta-band h2 em,.page-hero .display em,
@@ -169,7 +169,7 @@ h1 em,h2 em,h3 em{
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .hero-eyebrow{margin-bottom:2.2rem}
 .hero-title{
-  font:500 clamp(2rem,3.7vw,3.4rem)/1.12 var(--serif-it);font-style:normal;
+  font:500 clamp(1.9rem,3.2vw,2.8rem)/1.16 var(--serif-it);font-style:normal;
   color:var(--ink);letter-spacing:.005em;
 }
 .hero-sub{margin-top:2.2rem;max-width:44ch;font-size:1.12rem;line-height:1.8;color:#3B3A35}
@@ -244,7 +244,7 @@ h1 em,h2 em,h3 em{
 .band img{position:absolute;inset:0;width:100%;height:115%;object-fit:cover}
 .band::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(246,243,237,.94) 6%,rgba(246,243,237,.55) 42%,rgba(246,243,237,0) 75%)}
 .band-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;gap:1.4rem}
-.band-title{font:400 clamp(2rem,4.4vw,3.6rem)/1.12 var(--serif);color:var(--ink);max-width:15ch}
+.band-title{font:400 clamp(1.8rem,3.2vw,2.75rem)/1.18 var(--serif);color:var(--ink);max-width:26ch}
 .band p{max-width:44ch;color:#3d3a30}
 
 /* ============ APPROACH ============ */
@@ -258,7 +258,7 @@ h1 em,h2 em,h3 em{
 .approach-note .small-caps{color:var(--gold-deep)}
 .approach-note p{font:500 clamp(1.1rem,1.5vw,1.3rem)/1.5 var(--serif-it);font-style:normal;color:var(--gold-deep)}
 .section--approach{padding-block:clamp(64px,8vh,110px)}
-.section--approach .display{font-size:clamp(2.3rem,4.4vw,4rem)}
+.section--approach .display{font-size:clamp(1.8rem,3.2vw,2.75rem)}
 .section--approach .approach{margin-top:clamp(1.4rem,2.5vw,2rem)}
 .section--approach .approach-ask{margin-top:1.6rem}
 .section--approach .approach-body{gap:1.1rem}
@@ -270,7 +270,7 @@ h1 em,h2 em,h3 em{
 .feature-visual{position:relative}
 .feature-visual .offset-img{border-radius:2px;box-shadow:24px 24px 0 var(--sand)}
 .feature-body{display:grid;gap:1.6rem;justify-items:start}
-.feature-body .display{font-size:clamp(2.3rem,4.6vw,4rem)}
+.feature-body .display{font-size:clamp(1.8rem,3.2vw,2.75rem)}
 
 /* ============ ABOUT ============ */
 .about-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(2.5rem,6vw,6rem);align-items:start}
@@ -284,7 +284,7 @@ h1 em,h2 em,h3 em{
 .founder-caption h3{font:400 1.35rem var(--serif);color:var(--ink)}
 .founder-caption p{font:500 .64rem/1.6 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep);margin-top:.4rem}
 .about-body{display:grid;gap:1.5rem}
-.about-body .display{font-size:clamp(2.1rem,4vw,3.4rem);margin-bottom:.6rem}
+.about-body .display{font-size:clamp(1.8rem,3.2vw,2.75rem);margin-bottom:.6rem}
 .about-body p{max-width:62ch}
 .founder-note{
   margin-top:1rem;padding:1.4rem 1.6rem;border-left:2px solid var(--gold);
@@ -293,7 +293,7 @@ h1 em,h2 em,h3 em{
 
 /* ============ ABOUT — editorial story ============ */
 .story-head{margin-bottom:clamp(3rem,6vw,5.5rem)}
-.story-title{margin-top:1.4rem;max-width:17ch;font-size:clamp(2.3rem,4.8vw,4.2rem)}
+.story-title{margin-top:1.4rem;max-width:30ch;font-size:clamp(1.8rem,3.2vw,2.75rem)}
 .story-text{display:grid;gap:1.4rem;max-width:54ch}
 .story-text p,.story p.story-text{color:var(--ink);font-size:1.08rem;line-height:1.85}
 .story-photo{margin:0}
@@ -308,7 +308,7 @@ h1 em,h2 em,h3 em{
 .story-text--open{padding-bottom:clamp(0rem,3vw,2.5rem)}
 .story .story-lead{font:400 clamp(1.5rem,2.3vw,1.9rem)/1.3 var(--serif);color:var(--ink)}
 .story-pause{
-  font:400 clamp(2rem,4.2vw,3.6rem)/1.15 var(--serif);color:var(--ink);
+  font:400 clamp(1.7rem,2.8vw,2.5rem)/1.2 var(--serif);color:var(--ink);
   margin:clamp(4.5rem,9vw,8rem) 0 clamp(4.5rem,9vw,8rem) clamp(0rem,22vw,22rem);
   padding-left:clamp(1.4rem,3vw,2.6rem);border-left:1px solid var(--gold);max-width:18ch;
 }
@@ -326,7 +326,7 @@ h1 em,h2 em,h3 em{
 .story-honest .story-text{padding-top:.5rem}
 .story .story-final{
   margin:clamp(5rem,11vw,10rem) 0 0 auto;max-width:max-content;text-align:right;
-  font:400 clamp(2rem,4vw,3.3rem)/1.2 var(--serif);color:var(--ink);
+  font:400 clamp(1.8rem,3vw,2.6rem)/1.2 var(--serif);color:var(--ink);
 }
 .story-final em{font-style:normal;color:inherit}
 @media(max-width:920px){
@@ -411,7 +411,7 @@ h1 em,h2 em,h3 em{
 .pillar--dive .band-inner{padding-block:clamp(4rem,8vw,6rem)}
 .pillar--dive .band-title{max-width:18ch}
 .pillar--dive p{max-width:46ch}
-.pillar--culinary .duo-body .display{font-size:clamp(2.3rem,4.6vw,4rem)}
+.pillar--culinary .duo-body .display{font-size:clamp(1.8rem,3.2vw,2.75rem)}
 @media(max-width:920px){
   .pillar--dive::after{background:linear-gradient(180deg,rgba(246,243,237,.96) 0%,rgba(246,243,237,.9) 60%,rgba(246,243,237,.4) 100%)}
 }
@@ -419,13 +419,13 @@ h1 em,h2 em,h3 em{
 /* ============ SHAPED AROUND YOU ============ */
 .shaped{padding-block:clamp(48px,7vh,88px) clamp(24px,4vh,48px)}
 .shaped-inner{display:grid;gap:clamp(1.2rem,3vh,2.4rem)}
-.shaped-title{font:400 clamp(2.3rem,4.6vw,4.2rem)/1.04 var(--serif);color:var(--ink);letter-spacing:.01em}
+.shaped-title{font:400 clamp(1.8rem,3.2vw,2.75rem)/1.18 var(--serif);color:var(--ink);letter-spacing:.01em}
 .shaped-title em{font-style:normal;font-weight:inherit;color:inherit}
 .shaped-body{display:grid;gap:1.3rem;max-width:44ch;justify-self:end;margin-right:clamp(0rem,6vw,6rem)}
 .shaped-list{color:var(--ink);font-size:1.08rem;line-height:1.75}
 .shaped-close{padding-top:1.2rem;border-top:1px solid var(--line);font:400 clamp(1.25rem,1.8vw,1.55rem)/1.4 var(--serif);color:var(--ink)}
 .shaped + .site-footer .footer-cta{padding-top:clamp(28px,5vh,56px);gap:clamp(1.2rem,2.6vh,2rem)}
-.shaped + .site-footer .footer-title{font-size:clamp(2.2rem,4.4vw,3.8rem)}
+.shaped + .site-footer .footer-title{font-size:clamp(1.8rem,3.2vw,2.75rem)}
 @media(max-width:920px){
   .shaped{min-height:0}
   .shaped-body{justify-self:start;margin-right:0}
@@ -434,7 +434,7 @@ h1 em,h2 em,h3 em{
 /* ============ FOOTER ============ */
 .site-footer{border-top:1px solid var(--line);background:transparent}
 .footer-cta{padding:var(--pad) 0 clamp(3rem,5vw,4.5rem);display:grid;gap:2.6rem}
-.footer-title{font:400 clamp(2.4rem,5.4vw,4.8rem)/1.1 var(--serif);color:var(--ink);max-width:16ch}
+.footer-title{font:400 clamp(1.8rem,3.2vw,2.75rem)/1.18 var(--serif);color:var(--ink);max-width:28ch}
 .contact-rows{border-top:1px solid var(--line)}
 .contact-row{
   display:grid;grid-template-columns:10rem 1fr 3rem;align-items:center;gap:1.5rem;
@@ -458,7 +458,7 @@ h1 em,h2 em,h3 em{
 .page-hero .crumbs{font:500 .66rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--body);margin-bottom:2rem;display:flex;gap:.9rem;align-items:center}
 .crumbs a:hover{color:var(--gold-deep)}
 .crumbs i{font-style:normal;color:var(--gold)}
-.page-hero .display{font-size:clamp(2.8rem,6.4vw,5.6rem);max-width:14ch}
+.page-hero .display{font-size:clamp(2rem,4vw,3.25rem);line-height:1.16;max-width:28ch;text-wrap:balance}
 .page-hero .lede{margin-top:1.8rem}
 .page-meta{
   margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid var(--line);
@@ -474,7 +474,7 @@ h1 em,h2 em,h3 em{
 .duo-media img{border-radius:2px}
 .duo-media .arch{aspect-ratio:4/5}
 .duo-body{display:grid;gap:1.4rem;justify-items:start}
-.duo-body h2{font:400 clamp(1.9rem,3.4vw,2.9rem)/1.15 var(--serif);color:var(--ink)}
+.duo-body h2{font:400 clamp(1.7rem,2.8vw,2.5rem)/1.2 var(--serif);color:var(--ink)}
 
 /* included list */
 .inc-list{display:grid;border-top:1px solid var(--line);margin-top:.6rem}
@@ -586,7 +586,7 @@ h1 em,h2 em,h3 em{
   .hero-sub{font-size:1rem}
   .hero-actions{gap:1.3rem}
   .page-hero{padding:8rem 0 clamp(2.2rem,6vw,3rem)}
-  .page-hero .display{font-size:clamp(2.2rem,9vw,3rem)}
+  .page-hero .display{font-size:clamp(1.9rem,7.5vw,2.25rem)}
   .page-meta{gap:1.4rem}
   .btn{padding:.85rem 1.3rem;font-size:.66rem;letter-spacing:.18em}
   .cta-band{flex-direction:column;align-items:flex-start;padding:clamp(1.8rem,6vw,2.5rem)}
@@ -695,3 +695,8 @@ h1 em,h2 em,h3 em{
   .cta-band h2,.media-card h3,.j-place h3,.p-group-head h2,.cr-value,.brand-word,
   .about-body .display,.page-hero .display,.testimonial blockquote,.t-slide blockquote,.founder-caption h3{color:#252420 !important}
 }
+
+/* Balanced heading wraps keep long titles compact across screen sizes. */
+h1,h2{text-wrap:balance;overflow-wrap:break-word}
+.story-title{max-width:30ch}
+.footer-title{max-width:28ch}
