@@ -98,3 +98,5 @@
   .dn .face{min-height:500px}
   .dn .form{padding:1.6rem}
 }
+.dn .drinks-img{max-width:440px;justify-self:center;aspect-ratio:439/574;max-height:none;min-height:0;height:auto}
+@media(max-width:900px){.dn .frame-img{width:calc(100% - 24px);margin-inline:auto}}
