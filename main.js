@@ -155,41 +155,7 @@
     }
   }
 
-  /* one-time entry gate: shown once per browser session (not on every
-     page navigation), gives a single click that both reveals the site
-     and starts the music with real user-gesture permission */
-  if (!sessionStorage.getItem(SESSION_KEY)) {
-    var gate = document.createElement('div');
-    gate.className = 'entry-gate';
-    gate.innerHTML =
-      '<div class="eg-inner">' +
-        '<img src="yunic-logo-gold.png" alt="Yunic Hospitality" class="eg-logo">' +
-        '<p class="eg-word">Yunic Hospitality</p>' +
-        '<button type="button" class="btn eg-enter"><span>Enter</span></button>' +
-        '<button type="button" class="eg-skip">Continue without sound</button>' +
-      '</div>';
-    document.body.appendChild(gate);
-    document.body.style.overflow = 'hidden';
-
-    function dismiss(withSound) {
-      sessionStorage.setItem(SESSION_KEY, '1');
-      if (withSound) {
-        audio.play().then(function () {
-          localStorage.setItem(STORAGE_KEY, 'on');
-        }).catch(function () {});
-      }
-      gate.classList.add('closing');
-      document.body.style.overflow = '';
-      window.setTimeout(function () {
-        gate.remove();
-      }, 650);
-    }
-
-    gate.querySelector('.eg-enter').addEventListener('click', function () { dismiss(true); });
-    gate.querySelector('.eg-skip').addEventListener('click', function () { dismiss(false); });
-  } else {
-    tryResume();
-  }
+  /* The site opens immediately. Music starts only from its optional control. */
 
   /* testimonial slider — one at a time, swipeable (drag left/right) + dots + autoplay */
   var slider = document.querySelector('.t-slider');
@@ -272,3 +238,4 @@
     }
   }
 })();
+
