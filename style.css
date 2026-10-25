@@ -700,3 +700,16 @@ h1 em,h2 em,h3 em{
 h1,h2{text-wrap:balance;overflow-wrap:break-word}
 .story-title{max-width:30ch}
 .footer-title{max-width:28ch}
+
+/* Dive & Dine introduction: photo and copy share the same vertical edges. */
+.dive-intro-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:stretch}
+.dive-intro-copy{align-self:center}
+.page-hero .dive-intro-copy .display{font-size:clamp(2rem,3.4vw,2.75rem);max-width:25ch}
+.dive-intro-photo{margin:0;min-height:420px;position:relative;overflow:hidden}
+.dive-intro-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:65% 52%}
+@media(max-width:920px){
+ .dive-intro-grid{grid-template-columns:1fr;gap:2rem}
+ .dive-intro-photo{min-height:0;aspect-ratio:4/3}
+ .dive-intro-photo img{object-position:50% 65%}
+ .page-hero .dive-intro-copy .display{font-size:clamp(1.9rem,6vw,2.75rem)}
+}
