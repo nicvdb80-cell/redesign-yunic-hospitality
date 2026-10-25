@@ -37,7 +37,7 @@ body::before{
   position:fixed;
   inset:0;
   z-index:-1;
-  background:var(--paper) url("marble-white-v2.jpg") center center / cover no-repeat;
+  background:var(--paper) url("marble-light.jpg") center center / cover no-repeat;
 }
 ::selection{background:var(--gold);color:var(--paper)}
 img{display:block;max-width:100%}
@@ -636,7 +636,7 @@ h1 em,h2 em,h3 em{
   position:fixed;inset:0;z-index:2200;
   display:flex;align-items:center;justify-content:center;
   background-color:var(--paper);
-  background-image:url("marble-white-v2.jpg");
+  background-image:url("marble-light.jpg");
   background-size:cover;background-position:center;background-repeat:no-repeat;
   animation:egIn .8s var(--ease);
 }
@@ -688,7 +688,7 @@ h1 em,h2 em,h3 em{
     color:#56554F !important;
   }
   body::before{
-    background:#F7F7F4 url("marble-white-v2.jpg") center center / cover no-repeat !important;
+    background:#F7F7F4 url("marble-light.jpg") center center / cover no-repeat !important;
   }
   .section--tint,.marquee,.site-footer,.media-card,.cta-band{background:transparent !important}
   .display,.hero-title,.footer-title,.band-title,.svc-name,.not-line,.duo-body h2,
