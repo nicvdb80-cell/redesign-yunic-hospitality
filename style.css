@@ -725,3 +725,17 @@ h1,h2{text-wrap:balance;overflow-wrap:break-word}
 @media(max-width:920px){
  .dive-partners .split-photo{min-height:0;aspect-ratio:4/3}
 }
+
+/* Keep the partner overview together on a typical desktop screen. */
+@media(min-width:921px){
+ .dive-partners{padding-block:clamp(24px,4vh,40px);scroll-margin-top:90px}
+ .dive-partners>.container>.display{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:1.25rem}
+ .dive-partners .split{gap:clamp(2rem,4vw,4rem)}
+ .dive-partners .split-photo{min-height:0}
+ .dive-partners .split-body{gap:.8rem}
+ .dive-partners .lede{font-size:1rem;line-height:1.6}
+ .dive-partners .dd-types{margin-top:0}
+ .dive-partners .dd-type{padding:.75rem 0;gap:.4rem}
+ .dive-partners .dd-type p{font-size:1rem;line-height:1.55}
+ .dive-partners .dd-type .small-caps{line-height:1.3}
+}
