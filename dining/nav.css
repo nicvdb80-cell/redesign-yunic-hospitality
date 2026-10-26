@@ -1,0 +1,68 @@
+/* Main Yunic navigation for Dining guide pages (extracted from /style.css) */
+.site-nav,.menu-overlay{--paper:#F7F7F4;--ink:#252420;--body:#56554F;--gold:#A48760;--gold-deep:#8A6D4B;--line:rgba(41,39,31,.16);--line-soft:rgba(41,39,31,.09);--serif:'Cormorant SC',serif;--serif-it:'Cormorant',serif;--sans:'DM Sans',sans-serif;--ease:cubic-bezier(.19,1,.22,1)}
+.site-nav a,.menu-overlay a{border-bottom:0;text-decoration:none}
+.site-nav button{background:none;border:0;cursor:pointer}
+.site-nav{position:fixed;inset:0 0 auto;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem clamp(1.2rem,4vw,3rem);
+  transition:background .5s,box-shadow .5s,padding .5s;}
+.site-nav.scrolled{background:rgba(247,247,244,.86);backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line-soft);padding-block:.7rem;}
+.brand{display:flex;align-items:center;gap:.8rem}
+.brand-mark{width:44px;height:44px;object-fit:contain}
+.brand-word{font:400 1.06rem/1 var(--serif);color:var(--ink);letter-spacing:.14em;text-transform:uppercase}
+.brand-word em{font-family:var(--serif-it);font-style:normal;text-transform:none;color:var(--gold-deep);letter-spacing:.02em}
+.nav-links{display:flex;gap:2.4rem}
+.nav-links a{font:500 .7rem/1 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--body);
+  position:relative;padding:.4rem 0;transition:color .3s;}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .4s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{font:500 .7rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;
+  border:1px solid var(--line);border-radius:999px;padding:.85rem 1.5rem;color:var(--ink);
+  transition:all .45s var(--ease);}
+.nav-cta:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.nav-toggle{display:none;flex-direction:column;gap:6px;padding:.6rem;z-index:1100}
+.nav-toggle span{width:26px;height:1.5px;background:var(--ink);transition:transform .45s var(--ease)}
+.nav-toggle.open span:first-child{transform:translateY(3.75px) rotate(45deg)}
+.nav-toggle.open span:last-child{transform:translateY(-3.75px) rotate(-45deg)}
+.menu-overlay{position:fixed;inset:0;z-index:1050;background:var(--paper);
+  display:flex;flex-direction:column;justify-content:center;padding:0 8vw;
+  opacity:0;visibility:hidden;transition:opacity .55s var(--ease),visibility .55s;}
+.menu-overlay.open{opacity:1;visibility:visible}
+.menu-overlay a{font:400 clamp(2.2rem,8vw,4rem)/1.25 var(--serif);color:var(--ink);
+  border-bottom:1px solid var(--line-soft);padding:1.1rem 0;
+  display:flex;justify-content:space-between;align-items:center;
+  transform:translateY(20px);opacity:0;transition:all .6s var(--ease);}
+.menu-overlay.open a{transform:none;opacity:1}
+.menu-overlay a i{font:500 .7rem var(--sans);letter-spacing:.3em;color:var(--gold-deep);font-style:normal}
+.menu-overlay a:hover{color:var(--gold-deep)}
+.menu-foot{margin-top:3rem;display:flex;gap:2rem;font:500 .7rem var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--body)}
+@media(max-width:920px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}}
+@media(max-width:480px){.site-nav{padding-inline:1rem}.brand{gap:.55rem}.brand-mark{width:36px;height:36px}.brand-word{font-size:.82rem;letter-spacing:.08em}.nav-toggle{padding:.75rem .5rem}}
+@media (prefers-color-scheme: dark){.display,.hero-title,.footer-title,.band-title,.svc-name,.not-line,.duo-body h2,
+  .cta-band h2,.media-card h3,.j-place h3,.p-group-head h2,.cr-value,.brand-word,
+  .about-body .display,.page-hero .display,.testimonial blockquote,.t-slide blockquote,.founder-caption h3{color:#252420 !important}}
+.nav-links a,.nav-cta,.brand-word{white-space:nowrap}
+@media(max-width:1380px){.nav-links{gap:1.5rem}.nav-links a{letter-spacing:.18em}.nav-cta{letter-spacing:.16em;padding-inline:1.2rem}}
+@media(max-width:1180px){.nav-links{gap:1.1rem}.nav-links a{letter-spacing:.12em;font-size:.66rem}.nav-cta{font-size:.64rem}}
+@media(max-width:1100px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}}
+.nav-drop{position:relative;display:flex;align-items:center}
+.nav-drop .caret{font-size:.6rem;margin-left:.35em;display:inline-block;transition:transform .3s var(--ease)}
+.nav-drop-menu{position:absolute;top:calc(100% + .9rem);left:-1.4rem;min-width:300px;
+  background:rgba(247,247,244,.97);backdrop-filter:blur(14px);
+  border:1px solid var(--line);box-shadow:0 18px 40px rgba(37,36,32,.08);
+  padding:.6rem 0;opacity:0;visibility:hidden;transform:translateY(-6px);
+  transition:opacity .3s var(--ease),transform .3s var(--ease),visibility .3s;}
+.nav-drop-menu::before{content:"";position:absolute;left:0;right:0;top:-1rem;height:1rem}
+.nav-drop:hover .nav-drop-menu,.nav-drop:focus-within .nav-drop-menu,.nav-drop.open .nav-drop-menu{opacity:1;visibility:visible;transform:none}
+.nav-drop:hover .caret,.nav-drop:focus-within .caret,.nav-drop.open .caret{transform:rotate(180deg)}
+.nav-links .nav-drop-menu a{display:block;padding:.85rem 1.4rem;letter-spacing:.18em;white-space:nowrap}
+.nav-links .nav-drop-menu a::after{display:none}
+.nav-drop-menu a b{display:block;font-weight:500;color:var(--ink)}
+.nav-drop-menu a span{display:block;margin-top:.45rem;font:400 .78rem/1.4 var(--sans);letter-spacing:.02em;text-transform:none;color:var(--body)}
+.nav-drop-menu a:hover{background:rgba(164,135,96,.08)}
+.nav-drop-menu a:hover b{color:var(--gold-deep)}
+.nav-drop-menu a+a{border-top:1px solid var(--line-soft)}
+.menu-overlay a.menu-sub{font-size:clamp(1.25rem,5vw,1.8rem);padding:.7rem 0 .7rem 1.4rem;color:var(--body)}
+.menu-overlay a.menu-sub i{color:var(--gold)}

@@ -20,3 +20,5 @@ footer p,footer a{color:#3B3A35!important}
 footer a{border-bottom-color:rgba(41,39,31,.25)!important}
 ::selection{background:rgba(164,135,96,.22);color:#252420}
 @media(max-width:420px){.logo em{display:none}}
+/* main site nav sits above the page; old minimal nav removed */
+.hero{padding-top:clamp(120px,13vw,160px)}

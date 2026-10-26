@@ -2,13 +2,65 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/yunic-dining", "destination": "/dining", "permanent": true },
-    { "source": "/yunic-dining.html", "destination": "/dining", "permanent": true },
-    { "source": "/private-chef", "destination": "/dining", "permanent": true },
-    { "source": "/private-chef.html", "destination": "/dining", "permanent": true },
-    { "source": "/private-dinner", "destination": "/dining", "permanent": true },
-    { "source": "/private-dinner.html", "destination": "/dining", "permanent": true },
-    { "source": "/consulting", "destination": "/culinary", "permanent": true },
-    { "source": "/consulting.html", "destination": "/culinary", "permanent": true }
+    {
+      "source": "/yunic-dining",
+      "destination": "/dining",
+      "permanent": true
+    },
+    {
+      "source": "/yunic-dining.html",
+      "destination": "/dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef",
+      "destination": "/dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-chef.html",
+      "destination": "/dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-dinner",
+      "destination": "/dining",
+      "permanent": true
+    },
+    {
+      "source": "/private-dinner.html",
+      "destination": "/dining",
+      "permanent": true
+    },
+    {
+      "source": "/consulting",
+      "destination": "/culinary",
+      "permanent": true
+    },
+    {
+      "source": "/consulting.html",
+      "destination": "/culinary",
+      "permanent": true
+    },
+    {
+      "source": "/media",
+      "destination": "https://www.instagram.com/yunichospitality/",
+      "permanent": false
+    },
+    {
+      "source": "/media.html",
+      "destination": "https://www.instagram.com/yunichospitality/",
+      "permanent": false
+    },
+    {
+      "source": "/gallery",
+      "destination": "https://www.instagram.com/yunichospitality/",
+      "permanent": false
+    },
+    {
+      "source": "/gallery.html",
+      "destination": "https://www.instagram.com/yunichospitality/",
+      "permanent": false
+    }
   ]
 }
