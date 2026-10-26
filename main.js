@@ -239,3 +239,22 @@
   }
 })();
 
+
+/* Experiences dropdown: tap to open on touch screens, Esc / outside click to close */
+(function () {
+  var drops = document.querySelectorAll('.nav-drop');
+  if (!drops.length) return;
+  var coarse = window.matchMedia('(hover: none)').matches;
+  drops.forEach(function (d) {
+    var t = d.querySelector('.nav-drop-trigger');
+    t.addEventListener('click', function (e) {
+      if (coarse && !d.classList.contains('open')) { e.preventDefault(); d.classList.add('open'); t.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    drops.forEach(function (d) { if (!d.contains(e.target)) { d.classList.remove('open'); d.querySelector('.nav-drop-trigger').setAttribute('aria-expanded', 'false'); } });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') drops.forEach(function (d) { d.classList.remove('open'); if (d.contains(document.activeElement)) document.activeElement.blur(); });
+  });
+})();
