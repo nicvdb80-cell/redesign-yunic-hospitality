@@ -106,3 +106,13 @@
 .dn .site-footer--slim .footer-base{padding-top:2.6rem}
 .dn .nav-links a[aria-current="page"]{color:var(--ink)}
 .dn .nav-links a[aria-current="page"]::after{width:100%}
+/* sample menu card */
+.dn .menu-card{max-width:640px;margin:2.8rem auto 2.2rem;padding:clamp(2rem,5vw,3.4rem) clamp(1.4rem,5vw,3.6rem);border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:8px;background:rgba(247,247,244,.82);text-align:center}
+.dn .mc-eyebrow{font:500 .64rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
+.dn .mc-courses{list-style:none;margin:2rem 0 0;padding:0}
+.dn .mc-courses li{padding:1.15rem 0;border-top:1px solid var(--line-soft)}
+.dn .mc-courses li:first-child{border-top:0}
+.dn .mc-courses h4{font:400 clamp(1.25rem,1.8vw,1.5rem)/1.25 var(--serif);color:var(--ink);margin:0 0 .45rem}
+.dn .mc-courses p{color:var(--ink);font-size:.95rem;line-height:1.7;margin:0 auto;max-width:44ch}
+.dn .mc-courses .mc-note{margin-top:.35rem;font:italic 400 1rem/1.5 var(--serif-it);color:var(--gold-deep)}
+.dn .mc-foot{margin-top:1.6rem;font-size:.82rem;color:var(--body);font-style:italic}
