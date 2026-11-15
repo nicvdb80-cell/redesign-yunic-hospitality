@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css?v=20261026">
-<link rel="stylesheet" href="/dining/dining.css?v=1.4">
+<link rel="stylesheet" href="/dining/dining.css?v=1.6">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -153,6 +153,7 @@
               <p>A generous spread of Indonesian dishes, served together for everyone to explore.</p>
               <p>Different flavours, textures, sambals and accompaniments fill the table. Take a little, pass a dish, go back for more. Our rijsttafel brings together Yuli&rsquo;s Indonesian roots and Nic&rsquo;s interpretation of the flavours he has come to know through years of living and cooking here.</p>
               <p>Made for friends, family and the pleasure of sharing a meal.</p>
+              <button class="tlink menu-open" type="button" data-menu="rt-menu">View a sample menu <span>&rarr;</span></button>
               <a class="tlink" href="#enquire">Bring rijsttafel to your table <span>&nearr;</span></a>
             </div>
           </div>
@@ -210,6 +211,19 @@
     </div>
   </div>
 </section>
+
+
+<dialog class="menu-dialog" id="rt-menu" aria-labelledby="rt-menu-title">
+  <div class="menu-card">
+    <button class="md-close" type="button" aria-label="Close menu">&times;</button>
+    <p class="mc-eyebrow">A sample menu</p>
+    <h3 class="md-title" id="rt-menu-title">Rijsttafel</h3>
+    <p class="md-sub">An Indonesian sharing table. Created with authentic flavours from Yuli&rsquo;s family and inspired by our travels through Indonesia, with a little touch of Chef Nic Vanderbeeken.</p>
+    <p class="mc-section">To Begin</p><ol class="mc-courses"><li><h4>Naniura</h4><p>Market fish · andaliman · turmeric · citrus</p></li><li><h4>Beef tartare</h4><p>Sambal ijo · crisp rice cracker</p></li><li><h4>Sweetcorn fritter</h4><p>Spring onion · coriander seed</p></li></ol><p class="mc-section">From the Garden</p><ol class="mc-courses"><li><h4>Urap</h4><p>Seasonal greens · long beans · spiced coconut</p></li><li><h4>Karedok</h4><p>Raw vegetables · peanut and kencur dressing</p></li><li><h4>Young jackfruit lawar</h4><p>Balinese spices · toasted coconut</p></li></ol><p class="mc-section">The Broth</p><ol class="mc-courses"><li><h4>Sop buntut</h4><p>Clear oxtail broth · tender oxtail · vegetables · celery leaf</p></li></ol><p class="mc-section">The Shared Table</p><ol class="mc-courses"><li><h4>Beef rendang</h4><p>Slow-cooked beef · coconut · spices</p></li><li><h4>Grilled market fish</h4><p>Sambal matah · fresh lime</p></li><li><h4>Opor ayam</h4><p>Chicken · fragrant coconut gravy</p></li><li><h4>Eggplant lodeh</h4><p>Eggplant · young corn · long beans</p></li><li><h4>Perkedel kentang</h4><p>Golden potato cakes</p></li></ol><p class="mc-section">Rice &amp; Accompaniments</p><ol class="mc-courses"><li><h4>Nasi liwet</h4><p>Lemongrass · salam leaf · shallot</p></li><li><h4>Nasi kuning</h4><p>Turmeric · coconut milk · fragrant spices</p></li><li><h4>Sambals &amp; accompaniments</h4><p>Sambal ulek, terasi and ijo · acar of cucumber, carrot and shallot · krupuk and emping</p></li></ol><p class="mc-section">To Finish</p><ol class="mc-courses"><li><h4>Seasonal tropical fruit</h4><p>Coconut sorbet · calamansi</p></li></ol>
+    <p class="mc-foot">Sample menu. Final dishes and agreed adjustments confirmed for each booking.</p>
+    <a class="tlink md-cta" href="#enquire">Bring rijsttafel to your table <span>&nearr;</span></a>
+  </div>
+</dialog>
 
 <!-- ============ SAMPLE MENUS ============ -->
 <section class="section section--line" id="sample-menus">
@@ -353,6 +367,6 @@
 </footer>
 
 <script src="/main.js?v=20261026"></script>
-<script src="/dining/dining.js?v=1.0"></script>
+<script src="/dining/dining.js?v=1.1"></script>
 </body>
 </html>

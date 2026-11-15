@@ -116,3 +116,16 @@
 .dn .mc-courses p{color:var(--ink);font-size:.95rem;line-height:1.7;margin:0 auto;max-width:44ch}
 .dn .mc-courses .mc-note{margin-top:.35rem;font:italic 400 1rem/1.5 var(--serif-it);color:var(--gold-deep)}
 .dn .mc-foot{margin-top:1.6rem;font-size:.82rem;color:var(--body);font-style:italic}
+/* sample menu button + dialog */
+.dn .back-text button.tlink{background:none;border:0;border-bottom:1px solid var(--gold);padding:0 0 .3rem;cursor:pointer;font:inherit;color:var(--paper);display:inline-flex;gap:.5rem;margin-top:1.4rem;margin-right:1.4rem;text-transform:uppercase;letter-spacing:.24em;font-size:.68rem}
+.dn .back-text button.tlink:hover{color:var(--gold)}
+.dn .menu-dialog{border:0;padding:0;background:transparent;max-width:min(680px,calc(100vw - 32px));width:100%;max-height:calc(100vh - 48px);overflow:auto}
+.dn .menu-dialog::backdrop{background:rgba(37,36,32,.55);backdrop-filter:blur(3px)}
+.dn .menu-dialog .menu-card{position:relative;margin:0;background:var(--paper);outline-offset:-10px}
+.dn .md-close{position:absolute;top:.8rem;right:1rem;background:none;border:0;font:300 2rem/1 var(--sans);color:var(--gold-deep);cursor:pointer;padding:.3rem}
+.dn .md-title{font:400 clamp(2rem,4vw,2.6rem)/1.1 var(--serif);color:var(--ink);margin:1rem 0 .8rem}
+.dn .md-sub{font-size:.95rem;line-height:1.7;color:var(--ink);max-width:46ch;margin:0 auto}
+.dn .mc-section{margin-top:2rem;font:500 .62rem/1 var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-deep)}
+.dn .mc-section + .mc-courses{margin-top:.6rem}
+.dn .md-cta{margin-top:1.6rem;display:inline-flex}
+.dn .menu-dialog{margin:auto;position:fixed;inset:0;height:fit-content}

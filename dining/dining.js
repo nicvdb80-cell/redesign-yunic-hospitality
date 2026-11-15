@@ -3,11 +3,24 @@
   'use strict';
   document.querySelectorAll('.flip').forEach(function (card) {
     card.addEventListener('click', function (e) {
-      if (e.target.closest('a')) return;
+      if (e.target.closest('a, button')) return;
       card.classList.toggle('flipped');
     });
     card.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.classList.toggle('flipped'); }
+    });
+  });
+
+  document.querySelectorAll('.menu-open').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var d = document.getElementById(b.dataset.menu);
+      if (d && d.showModal) d.showModal();
+    });
+  });
+  document.querySelectorAll('.menu-dialog').forEach(function (d) {
+    d.addEventListener('click', function (e) {
+      if (e.target === d || e.target.closest('.md-close') || e.target.closest('.md-cta')) d.close();
     });
   });
 
